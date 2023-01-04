@@ -1,8 +1,11 @@
-version: '3.8'
+version: "3.8"
 
 services:
   coolify:
-    image: coollabsio/coolify:${TAG:-latest}
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    # image: coollabsio/coolify:${TAG:-latest}
     restart: always
     container_name: coolify
     ports:
@@ -11,22 +14,22 @@ services:
         protocol: tcp
         mode: host
     volumes:
-      - 'coolify-local-backup:/app/backups'
-      - 'coolify-db:/app/db'
-      - 'coolify-logs:/app/logs'
-      - 'coolify-ssl-certs:/app/ssl'
-      - 'coolify-traefik-letsencrypt:/etc/traefik/acme'
-      - 'coolify-letsencrypt:/etc/letsencrypt'
-      - '/var/run/docker.sock:/var/run/docker.sock'
+      - "coolify-local-backup:/app/backups"
+      - "coolify-db:/app/db"
+      - "coolify-logs:/app/logs"
+      - "coolify-ssl-certs:/app/ssl"
+      - "coolify-traefik-letsencrypt:/etc/traefik/acme"
+      - "coolify-letsencrypt:/etc/letsencrypt"
+      - "/var/run/docker.sock:/var/run/docker.sock"
     env_file:
-      - '.env'
+      - ".env"
     networks:
       - coolify-infra
   fluent-bit:
     image: coollabsio/coolify-fluent-bit:1.0.0
     container_name: coolify-fluentbit
     volumes:
-      - 'coolify-logs:/app/logs'
+      - "coolify-logs:/app/logs"
     networks:
       - coolify-infra
 networks:
