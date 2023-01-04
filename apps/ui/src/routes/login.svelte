@@ -47,8 +47,8 @@
 
 <div class="flex lg:flex-row flex-col h-screen">
 	<div class="bg-neutral-focus h-screen lg:flex hidden flex-col justify-end p-20 flex-1">
-		<h1 class="title lg:text-6xl mb-5 border-gradient">Coolify</h1>
-		<h3 class="title">Made self-hosting simple.</h3>
+		<h1 class="title lg:text-6xl mb-5 border-gradient">Fugoku</h1>
+		<h3 class="title">We made hosting simple again.</h3>
 	</div>
 	<div class="flex flex-1 flex-col lg:max-w-2xl">
 		<div class="flex flex-row p-8 items-center space-x-3">
@@ -56,17 +56,17 @@
 				<div class="avatar" style="width: 40px; height: 40px">
 					<img
 						src={$appSession.whiteLabeledDetails.icon}
-						alt="Icon for white labeled version of Coolify"
+						alt="Icon for white labeled version of Fugoku"
 					/>
 				</div>
 			{:else}
 				<div>
 					<div class="avatar" style="width: 40px; height: 40px">
-						<img src="favicon.png" alt="Coolify icon" />
+						<img src="favicon.png" alt="Fugoku icon" />
 					</div>
 				</div>
 				<div class="prose">
-					<h4>Coolify</h4>
+					<h4>Fugoku</h4>
 				</div>
 			{/if}
 		</div>
@@ -74,7 +74,7 @@
 			class="w-full md:px-20 lg:px-10 xl:px-20 p-6 flex flex-col h-full justify-center items-center"
 		>
 			<div class="mb-5 w-full prose prose-neutral">
-				<h1 class="m-0 white">Welcome back</h1>
+				<h1 class="m-0 white">Welcome to Fugoku</h1>
 				<h5>Please login to continue.</h5>
 			</div>
 			<form on:submit|preventDefault={handleSubmit} class="flex flex-col py-4 space-y-3 w-full">
@@ -117,7 +117,7 @@
 					{/if}
 				</div>
 			</form>
-			{#if browser && window.location.host === 'demo.coolify.io'}
+			{#if browser && window.location.host === 'demo.fugoku.io'}
 				<div class="pt-5 font-bold">
 					Registration is <span class="text-pink-500">open</span>, just fill in an email (does not
 					need to be live email address for the demo instance) and a password.
