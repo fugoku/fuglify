@@ -62,7 +62,7 @@ doNotTrack() {
 restartCoolify() {  
     if [ -f "$COOLIFY_CONF_FOUND" ]; then
         echo "Restarting Coolify."
-        cd ~/coolify && sudo docker run --rm -tid --env-file $COOLIFY_CONF_FOUND -v /var/run/docker.sock:/var/run/docker.sock -v coolify-db-sqlite coollabsio/coolify:$VERSION /bin/sh -c "env | grep COOLIFY > .env && docker compose up -d --force-recreate" > /dev/null
+        cd ~/coolify && sudo docker run --rm -tid --env-file $COOLIFY_CONF_FOUND -v /var/run/docker.sock:/var/run/docker.sock -v coolify-db-sqlite fugoku/fuglify:$VERSION /bin/sh -c "env | grep COOLIFY > .env && docker compose up -d --force-recreate" > /dev/null
         exit 0
     else 
         echo "Coolify never installed on this server. Cannot restart."
@@ -330,9 +330,9 @@ if [ $FORCE -ne 1 ]; then
     echo "Installing Coolify."
 fi
 echo "Pulling Coolify latest image ($VERSION)."
-sudo docker pull -q coollabsio/coolify:$VERSION > /dev/null
+sudo docker pull -q fugoku/fuglify:$VERSION > /dev/null
 echo "Starting Coolify."
-cd ~/coolify && sudo docker run -tid --env-file $COOLIFY_CONF_FOUND -v /var/run/docker.sock:/var/run/docker.sock -v coolify-db-sqlite coollabsio/coolify:$VERSION /bin/sh -c "env | grep COOLIFY > .env && docker compose up -d --force-recreate" > /dev/null
+cd ~/coolify && sudo docker run -tid --env-file $COOLIFY_CONF_FOUND -v /var/run/docker.sock:/var/run/docker.sock -v coolify-db-sqlite fugoku/fuglify:$VERSION /bin/sh -c "env | grep COOLIFY > .env && docker compose up -d --force-recreate" > /dev/null
 
 echo -e "Congratulations! Your Coolify instance is ready to use.\n"
 echo "Please visit http://$(curl -4s https://ifconfig.io):3000 to get started."
