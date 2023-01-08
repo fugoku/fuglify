@@ -13,6 +13,10 @@ services:
         published: 3000
         protocol: tcp
         mode: host
+      - target: 5555
+        published: 5555
+        protocol: tcp
+        mode: host
     volumes:
       - "coolify-local-backup:/app/backups"
       - "coolify-db:/app/db"
