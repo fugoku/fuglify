@@ -1,6 +1,6 @@
 {
 	"name": "server",
-	"description": "Coolify's Fastify API",
+	"description": "Fugoku's Fastify API",
 	"license": "Apache-2.0",
 	"scripts": {
 		"build": "rimraf ../../build && tsc --outDir ../../build",

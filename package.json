@@ -49,5 +49,9 @@
     "netlify",
     "open-source",
     "coolify"
-  ]
+  ],
+  "dependencies": {
+    "nodemon": "^2.0.20",
+    "run-p": "^0.0.0"
+  }
 }

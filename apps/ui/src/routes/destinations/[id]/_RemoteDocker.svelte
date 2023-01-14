@@ -77,7 +77,7 @@
 				const sure = confirm(
 					`Are you sure you want to ${
 						destination.isCoolifyProxyUsed ? 'disable' : 'enable'
-					} Coolify proxy? It will remove the proxy for all configured networks and all deployments! Nothing will be reachable if you do it!`
+					} Fugoku proxy? It will remove the proxy for all configured networks and all deployments! Nothing will be reachable if you do it!`
 				);
 				if (!sure) {
 					loading.proxy = false;
@@ -271,7 +271,7 @@
 			title={$t('destination.use_coolify_proxy')}
 			description={`Install & configure a proxy (based on Traefik) on the destination to allow you to access your applications and services without any manual configuration.${
 				cannotDisable
-					? '<span class="font-bold text-white">You cannot disable this proxy as FQDN is configured for Coolify.</span>'
+					? '<span class="font-bold text-white">You cannot disable this proxy as FQDN is configured for Fugoku.</span>'
 					: ''
 			}`}
 		/>

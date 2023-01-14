@@ -182,7 +182,7 @@ export async function checkGitLabOAuthID(request: FastifyRequest<CheckGitLabOAut
         const { oauthId } = request.body
         const found = await prisma.gitlabApp.findFirst({ where: { oauthId: Number(oauthId) } });
         if (found) {
-            throw { status: 500, message: 'OAuthID already configured in Coolify.' }
+            throw { status: 500, message: 'OAuthID already configured in Fugoku.' }
         }
         return {}
     } catch ({ status, message }) {

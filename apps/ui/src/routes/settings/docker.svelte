@@ -119,57 +119,57 @@
 		>
 	</div>
 	{#if registries.length > 0}
-	<div class="mx-auto w-full">
-		<table class="table w-full">
-			<thead>
-				<tr>
-					<th>Name</th>
-					<th>Username</th>
-					<th>Password</th>
-					<th>Actions</th>
-				</tr>
-			</thead>
-			<tbody>
-				{#each registries as registry}
+		<div class="mx-auto w-full">
+			<table class="table w-full">
+				<thead>
 					<tr>
-						<td
-							>{registry.name}
-							<div class="text-xs">{registry.url}</div></td
-						>
-						<td>
-							<CopyPasswordField
-								name="username"
-								id="Username"
-								bind:value={registry.username}
-								placeholder="Username"
-							/></td
-						>
-						<td
-							><CopyPasswordField
-								isPasswordField={true}
-								name="Password"
-								id="Password"
-								bind:value={registry.password}
-								placeholder="Password"
-							/></td
-						>
-
-						<td>
-							<button on:click={() => setRegistry(registry)} class="btn btn-sm btn-primary"
-								>Set</button
-							>
-							{#if registry.id !== '0'}
-								<button
-									on:click={() => deleteDockerRegistry(registry.id)}
-									class="btn btn-sm btn-error">Delete</button
-								>
-							{/if}
-						</td>
+						<th>Name</th>
+						<th>Username</th>
+						<th>Password</th>
+						<th>Actions</th>
 					</tr>
-				{/each}
-			</tbody>
-		</table>
-	</div>
+				</thead>
+				<tbody>
+					{#each registries as registry}
+						<tr>
+							<td
+								>{registry.name}
+								<div class="text-xs">{registry.url}</div></td
+							>
+							<td>
+								<CopyPasswordField
+									name="username"
+									id="Username"
+									bind:value={registry.username}
+									placeholder="Username"
+								/></td
+							>
+							<td
+								><CopyPasswordField
+									isPasswordField={true}
+									name="Password"
+									id="Password"
+									bind:value={registry.password}
+									placeholder="Password"
+								/></td
+							>
+
+							<td>
+								<button on:click={() => setRegistry(registry)} class="btn btn-sm btn-primary"
+									>Set</button
+								>
+								{#if registry.id !== '0'}
+									<button
+										on:click={() => deleteDockerRegistry(registry.id)}
+										class="btn btn-sm btn-error">Delete</button
+									>
+								{/if}
+							</td>
+						</tr>
+					{/each}
+				</tbody>
+			</table>
+		</div>
 	{/if}
 </div>
 
@@ -177,7 +177,7 @@
 	<input type="checkbox" id="my-modal" class="modal-toggle" />
 	<div class="modal modal-bottom sm:modal-middle">
 		<div class="modal-box rounded bg-coolgray-300">
-			<h3 class="font-bold text-lg">Add a Docker Registry to Coolify</h3>
+			<h3 class="font-bold text-lg">Add a Docker Registry to Fugoku</h3>
 			<div>
 				<form on:submit|preventDefault={handleSubmit}>
 					<label for="name" class="label">

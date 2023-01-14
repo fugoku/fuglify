@@ -126,11 +126,11 @@ if [ $DEBUG -eq 1 ]; then
     echo "COOLIFY_AUTO_UPDATE=$COOLIFY_AUTO_UPDATE"
 fi
 if [ $FORCE -eq 1 ]; then
-    echo -e "Installing Coolify with force option!"
+    echo -e "Installing Fuglify with force option!"
 else
-    echo -e "Welcome to Coolify installer!"
-    echo -e "This script will install all requirements to run Coolify."
-    echo -e "(Source code of this script: https://github.com/coollabsio/get.coollabs.io/blob/main/static/coolify/install.sh)\n"
+    echo -e "Welcome to Fuglify installer!"
+    echo -e "This script will install all requirements to run Fuglify."
+    # echo -e "(Source code of this script: https://github.com/coolggglabsio/get.coollabs.io/blob/main/static/coolify/install.sh)\n"
     echo "-------------"
     echo -e "TELEMETRY:"
     echo -e "1. The script generates a random UUID for your installation to show the number of installed instances on the landing page (https://coolify.io). Nothing else."
@@ -215,7 +215,7 @@ fi
 
 # Check docker swarm
 if [ "$(sudo docker info --format '{{.Swarm.ControlAvailable}}')" = "true" ]; then
-    echo "Coolify does not support Docker Swarm yet. Please use a non-swarm compatible version of Docker."
+    echo "Fugligy does not support Docker Swarm yet. Please use a non-swarm compatible version of Docker."
     exit 1
 fi
 
@@ -305,12 +305,12 @@ if [ ! -x ~/.docker/cli-plugins/docker-compose ]; then
     fi
 fi
 if [ $FORCE -eq 1 ]; then
-    echo 'Updating Coolify configuration.'
+    echo 'Updating Fuglify configuration.'
     saveCoolifyConfiguration
 else
     if [ -f "$COOLIFY_CONF_FOUND" ]; then
         while true; do
-                    read -p "Coolify configuration found (${COOLIFY_CONF_FOUND}). I will overwrite it, okay?  [Yy/Nn] " yn
+                    read -p "Fuglify configuration found (${COOLIFY_CONF_FOUND}). I will overwrite it, okay?  [Yy/Nn] " yn
                     case $yn in
                     [Yy]*)
                         saveCoolifyConfiguration
@@ -327,13 +327,16 @@ else
     fi
 fi
 if [ $FORCE -ne 1 ]; then
-    echo "Installing Coolify."
+    echo "Installing Fugoku."
 fi
-echo "Pulling Coolify latest image ($VERSION)."
+echo "Pulling Fugoku latest image ($VERSION)."
 sudo docker pull -q fugoku/fuglify:$VERSION > /dev/null
-echo "Starting Coolify."
+echo "Starting Fuglify."
 cd ~/coolify && sudo docker run -tid --env-file $COOLIFY_CONF_FOUND -v /var/run/docker.sock:/var/run/docker.sock -v coolify-db-sqlite fugoku/fuglify:$VERSION /bin/sh -c "env | grep COOLIFY > .env && docker compose up -d --force-recreate" > /dev/null
 
-echo -e "Congratulations! Your Coolify instance is ready to use.\n"
+echo -e "Congratulations! Your Fuglify instance is ready to use.\n"
 echo "Please visit http://$(curl -4s https://ifconfig.io):3000 to get started."
 echo "It will take a few minutes to start up, don't worry."
+
+
+# docker run -it -v .env:.env -v /var/run/docker.sock:/var/run/docker.sock -v coolify-db-sqlite fugoku/fuglify:v1 /bin/sh -c "env | grep COOLIFY > .env && docker compose up --force-recreate"

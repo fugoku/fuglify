@@ -5,7 +5,6 @@ services:
     build:
       context: .
       dockerfile: ./Dockerfile
-    # image: coollabsio/coolify:${TAG:-latest}
     restart: always
     container_name: coolify
     ports:

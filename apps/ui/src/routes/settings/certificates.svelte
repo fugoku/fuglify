@@ -98,7 +98,7 @@
 			<h3 class="font-bold text-lg">Add a new SSL Certificate</h3>
 			<p class="py-4">
 				SSL Certificates are used to secure your domain and allow you to use HTTPS. <br /><br />Once
-				you uploaded your certificate, Coolify will automatically configure it for you in the
+				you uploaded your certificate, Fugoku will automatically configure it for you in the
 				background.
 			</p>
 			<div class="modal-action">

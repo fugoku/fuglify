@@ -61,7 +61,7 @@ export function createServer(opts: ServerOptions) {
 	const start = async () => {
 		try {
 			await server.listen({ host: '0.0.0.0', port });
-			console.log('Coolify server is listening on port', port, 'at 0.0.0.0 🚀');
+			console.log('Fugoku server is listening on port', port, 'at 0.0.0.0 🚀');
 			const graceful = new Graceful({ brees: [scheduler] });
 			graceful.listen();
 			scheduler.run('worker');

@@ -98,7 +98,7 @@
 	<input type="checkbox" id="my-modal" class="modal-toggle" />
 	<div class="modal modal-bottom sm:modal-middle">
 		<div class="modal-box rounded bg-coolgray-300">
-			<h3 class="font-bold text-lg">Add a new SSH Key to Coolify</h3>
+			<h3 class="font-bold text-lg">Add a new SSH Key to Fugoku</h3>
 			<p class="py-4">
 				SSH Keys can be used to authenticate & execute commands on remote servers.
 				<br /><br />You can generate a new public/private key using the following command:

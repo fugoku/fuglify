@@ -12,7 +12,7 @@ https://demo.coolify.io/
 
 If you have a new service / build pack you would like to add, raise an idea [here](https://feedback.coolify.io/) to get feedback from the community!
 
---- 
+---
 
 ## How to install
 
@@ -30,7 +30,7 @@ If you would like no questions during installation:
 wget -q https://get.coollabs.io/coolify/install.sh -O install.sh; sudo bash ./install.sh -f
 ```
 
---- 
+---
 
 ## Features
 
@@ -111,13 +111,13 @@ Deploy your resource to:
 Coolify is developed under the [Apache License](./LICENSE) and you can help to make it grow.
 Our community will be glad to have you on board!
 
-Learn how to contribute to Coolify as as ...
+Learn how to contribute to Fugoku as as ...
 
 &rarr; [👩🏾‍💻 Software developer](./CONTRIBUTION.md)
 
 &rarr; [🧑🏻‍🏫 Translator](./docs/contribution/Translating.md)
 
-<!-- 
+<!--
 &rarr; 🧑🏽‍🎨 Designer
 &rarr; 🙋‍♀️ Community Managemer
 &rarr; 🧙🏻‍♂️ Text Content Creator
@@ -136,7 +136,7 @@ Become a financial contributor and help us sustain our community. [[Contribute](
 
 ### Organizations
 
-Support this project with your organization. Your logo will show up here with a link to your website. 
+Support this project with your organization. Your logo will show up here with a link to your website.
 
 <a href="https://opencollective.com/coollabsio/organization/0/website"><img src="https://opencollective.com/coollabsio/organization/0/avatar.svg"></a>
 <a href="https://opencollective.com/coollabsio/organization/1/website"><img src="https://opencollective.com/coollabsio/organization/1/avatar.svg"></a>
@@ -147,4 +147,4 @@ Support this project with your organization. Your logo will show up here with a 
 <a href="https://opencollective.com/coollabsio/organization/6/website"><img src="https://opencollective.com/coollabsio/organization/6/avatar.svg"></a>
 <a href="https://opencollective.com/coollabsio/organization/7/website"><img src="https://opencollective.com/coollabsio/organization/7/avatar.svg"></a>
 <a href="https://opencollective.com/coollabsio/organization/8/website"><img src="https://opencollective.com/coollabsio/organization/8/avatar.svg"></a>
-<a href="https://opencollective.com/coollabsio/organization/9/website"><img src="https://opencollective.com/coollabsio/organization/9/avatar.svg"></a> 
+<a href="https://opencollective.com/coollabsio/organization/9/website"><img src="https://opencollective.com/coollabsio/organization/9/avatar.svg"></a>
